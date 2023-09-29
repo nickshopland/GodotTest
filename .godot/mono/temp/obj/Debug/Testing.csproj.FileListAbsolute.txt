@@ -1,0 +1,17 @@
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\bin\Debug\Testing.deps.json
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\bin\Debug\Testing.runtimeconfig.json
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\bin\Debug\Testing.dll
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\bin\Debug\Testing.pdb
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\bin\Debug\GodotSharp.dll
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\obj\Debug\Testing.csproj.AssemblyReference.cache
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\obj\Debug\Testing.GeneratedMSBuildEditorConfig.editorconfig
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\obj\Debug\Testing.AssemblyInfoInputs.cache
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\obj\Debug\Testing.AssemblyInfo.cs
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\obj\Debug\Testing.csproj.CoreCompileInputs.cache
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\obj\Debug\Testing.csproj.CopyComplete
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\obj\Debug\Testing.dll
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\obj\Debug\refint\Testing.dll
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\obj\Debug\Testing.pdb
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\obj\Debug\Testing.genruntimeconfig.cache
+D:\cmp3shoplng\dev\godot\Testing\.godot\mono\temp\obj\Debug\ref\Testing.dll
