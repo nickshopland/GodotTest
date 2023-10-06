@@ -19,25 +19,14 @@ public partial class PlayerC : Sprite2D
 
     public override void _Process(double delta)
     {
-        var direction = 0;
-        if (Input.IsActionPressed("wasd_left"))
-        {
-            direction = -1;
-        }
-        if (Input.IsActionPressed("wasd_right"))
-        {
-            direction = 1;
-        }
+        var direction = Input.IsActionPressed("wasd_right") ? 1 : 0;
+        direction -= Input.IsActionPressed("wasd_left") ? 1 : 0;
 
         // Rotation += _angularSpeed * (float)delta;
         Rotation += _angularSpeed * direction * (float)delta;
 
-        // var velocity = Vector2.Up.Rotated(Rotation) * _speed;
-        var velocity = Vector2.Zero;
-        if (Input.IsActionPressed("wasd_up"))
-        {
-            velocity = Vector2.Up.Rotated(Rotation) * _speed;
-        }
+        var velocity = Input.IsActionPressed("wasd_up") ? Vector2.Up.Rotated(Rotation) * _speed : Vector2.Zero;
+        velocity += Input.IsActionPressed("wasd_down") ? Vector2.Down.Rotated(Rotation) * _speed : Vector2.Zero;
 
         Position += velocity * (float)delta;
     }

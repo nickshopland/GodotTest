@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4d51atkjoo8u"]
+
+[ext_resource type="Texture2D" uid="uid://d03rk32ygcyck" path="res://icon.svg" id="2_35an5"]
+[ext_resource type="Script" path="res://2d_scene/PlayerG.gd" id="3_eine2"]
+[ext_resource type="PackedScene" uid="uid://b4swmitoja7ln" path="res://2d_scene/PlayerC.tscn" id="4_btjc1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gcphe"]
+font_size = 240
+font_color = Color(0.415686, 0.415686, 0.415686, 1)
+
+[node name="2DScene" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "2D Scene"
+label_settings = SubResource("LabelSettings_gcphe")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonG" type="Button" parent="."]
+offset_left = 150.0
+offset_top = 570.0
+offset_right = 300.0
+offset_bottom = 620.0
+text = "Toggle G"
+
+[node name="ButtonC" type="Button" parent="."]
+offset_left = 850.0
+offset_top = 570.0
+offset_right = 1000.0
+offset_bottom = 620.0
+text = "Toggle C"
+
+[node name="PlayerG" type="Sprite2D" parent="."]
+position = Vector2(450, 350)
+texture = ExtResource("2_35an5")
+script = ExtResource("3_eine2")
+
+[node name="Timer" type="Timer" parent="PlayerG"]
+autostart = true
+
+[node name="PlayerC" parent="." instance=ExtResource("4_btjc1")]
+position = Vector2(700, 350)
+
+[node name="TimerC" type="Timer" parent="PlayerC"]
+autostart = true
+
+[connection signal="pressed" from="ButtonG" to="PlayerG" method="_on_button_g_pressed"]
+[connection signal="pressed" from="ButtonC" to="PlayerC" method="OnButtonCPressed"]

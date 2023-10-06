@@ -1,54 +1,34 @@
-[gd_scene load_steps=7 format=3 uid="uid://brqnje4338f4e"]
+[gd_scene load_steps=4 format=3 uid="uid://brqnje4338f4e"]
 
-[ext_resource type="PackedScene" uid="uid://c8qrbynbyhgcr" path="res://label.tscn" id="1_wvq83"]
-[ext_resource type="Texture2D" uid="uid://d03rk32ygcyck" path="res://icon.svg" id="2_0ssbh"]
-[ext_resource type="PackedScene" uid="uid://b4swmitoja7ln" path="res://PlayerC.tscn" id="2_v3joo"]
-[ext_resource type="Script" path="res://PlayerG.gd" id="3_22kcm"]
+[ext_resource type="Script" path="res://Main.cs" id="1_2qafj"]
+[ext_resource type="PackedScene" uid="uid://c4d51atkjoo8u" path="res://2d_scene.tscn" id="1_sec6k"]
+[ext_resource type="Script" path="res://BttnLayout.cs" id="3_66kfm"]
 
-[sub_resource type="SystemFont" id="SystemFont_uy0ia"]
+[node name="Node" type="Node"]
+script = ExtResource("1_2qafj")
 
-[sub_resource type="LabelSettings" id="LabelSettings_crigf"]
-font = SubResource("SystemFont_uy0ia")
-font_size = 200
-font_color = Color(0.392157, 0.392157, 0.392157, 1)
+[node name="2DScene" parent="." instance=ExtResource("1_sec6k")]
 
-[node name="Main" type="Node2D"]
+[node name="2DGame" type="Node2D" parent="."]
+visible = false
 
-[node name="Label" parent="." instance=ExtResource("1_wvq83")]
-offset_left = 16.0
-offset_top = 10.0
-offset_right = 1140.0
-offset_bottom = 636.0
-label_settings = SubResource("LabelSettings_crigf")
-autowrap_mode = 3
+[node name="3DNode" type="Node3D" parent="."]
+visible = false
 
-[node name="PlayerG" type="Sprite2D" parent="."]
-position = Vector2(450, 350)
-texture = ExtResource("2_0ssbh")
-script = ExtResource("3_22kcm")
+[node name="Container" type="Container" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_66kfm")
 
-[node name="Timer" type="Timer" parent="PlayerG"]
-autostart = true
+[node name="Button" type="Button" parent="Container"]
+layout_mode = 2
+text = "2D Scene"
 
-[node name="PlayerC" parent="." instance=ExtResource("2_v3joo")]
-position = Vector2(700, 350)
+[node name="Button2" type="Button" parent="Container"]
+layout_mode = 2
+text = "2D Scene"
 
-[node name="TimerC" type="Timer" parent="PlayerC"]
-autostart = true
-
-[node name="ButtonG" type="Button" parent="."]
-offset_left = 150.0
-offset_top = 570.0
-offset_right = 300.0
-offset_bottom = 620.0
-text = "Toggle G"
-
-[node name="ButtonC" type="Button" parent="."]
-offset_left = 850.0
-offset_top = 570.0
-offset_right = 1000.0
-offset_bottom = 620.0
-text = "Toggle C"
-
-[connection signal="pressed" from="ButtonG" to="PlayerG" method="_on_button_g_pressed"]
-[connection signal="pressed" from="ButtonC" to="PlayerC" method="OnButtonCPressed"]
+[node name="Button3" type="Button" parent="Container"]
+layout_mode = 2
+text = "2D Scene"
